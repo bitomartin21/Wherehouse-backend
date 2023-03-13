@@ -21,7 +21,7 @@ namespace Wherehouse_backend.Repository
         Task<IEnumerable<Birtokolt>> GetBirtokoltak();
         Task<Birtokolt> GetBirtokolt(int birtokoltId);
         Task<Birtokolt> AddBirtokolt(int raktarId, int tulajId);
-        Task<Birtokolt> UpdateBirtokolt(Birtokolt birtokolt);
+        Task<Birtokolt> UpdateBirtokolt(int id,int raktarId, int tulajId);
         Task<Birtokolt> DeleteBirtokolt(int BirtokoltId);
 
         Task<IEnumerable<Tulajdonos>> GetTulajdonosok();

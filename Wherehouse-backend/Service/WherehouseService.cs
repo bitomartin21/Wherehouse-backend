@@ -150,9 +150,13 @@ namespace Wherehouse_backend.Service
 				await _context.SaveChangesAsync();
 				return birtokolt;
 			}
-			public async Task<Birtokolt> UpdateBirtokolt(Birtokolt birtokolt)
+			public async Task<Birtokolt> UpdateBirtokolt(int id, int raktarId, int tulajId)
 			{
-				_context.Birtokolts.Update(birtokolt);
+                Birtokolt birtokolt = new Birtokolt();
+                birtokolt.Id = id;
+                birtokolt.Raktarid = raktarId;
+                birtokolt.Tulajid = tulajId;
+                _context.Birtokolts.Update(birtokolt);
 				await _context.SaveChangesAsync();
 				return birtokolt;
 			}

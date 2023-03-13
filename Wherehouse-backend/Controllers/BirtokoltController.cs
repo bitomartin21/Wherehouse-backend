@@ -34,9 +34,9 @@ namespace Wherehouse_backend.Controllers
         }
 
         [HttpPut]
-        public async Task<Birtokolt> Put(Birtokolt birtokolt)
+        public async Task<Birtokolt> Put(int id, int raktarId, int tulajId)
         {
-            return await _context.UpdateBirtokolt(birtokolt);
+            return await _context.UpdateBirtokolt(id, raktarId, tulajId);
         }
 
         [HttpDelete]
