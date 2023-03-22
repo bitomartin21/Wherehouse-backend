@@ -10,5 +10,9 @@ public partial class Tulajdonos
 
     public string Nev { get; set; } = null!;
 
+    public string email { get; set; } = null!;
+
+    public string password { get; set; } = null!;
+
     public virtual ICollection<Birtokolt> Birtokolts { get; } = new List<Birtokolt>();
 }

@@ -127,6 +127,18 @@ namespace Wherehouse_backend.Migrations
                         .HasColumnType("varchar(100)")
                         .HasColumnName("nev");
 
+                    b.Property<string>("email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("email");
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("password");
+
                     b.HasKey("Id")
                         .HasName("PRIMARY");
 

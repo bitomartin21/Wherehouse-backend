@@ -54,7 +54,9 @@ namespace Wherehouse_backend.Migrations
                 {
                     id = table.Column<int>(type: "int(11)", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    nev = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
+                    nev = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
+                    email = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false),
+                    password = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {

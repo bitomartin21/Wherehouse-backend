@@ -118,6 +118,12 @@ public partial class WherehousedbContext : DbContext
             entity.Property(e => e.Nev)
                 .HasMaxLength(100)
                 .HasColumnName("nev");
+            entity.Property(e => e.email)
+                .HasMaxLength(100)
+                .HasColumnName("email");
+            entity.Property(e => e.password)
+                .HasMaxLength(100)
+                .HasColumnName("password");
         });
 
         OnModelCreatingPartial(modelBuilder);
