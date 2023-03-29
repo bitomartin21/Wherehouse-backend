@@ -18,6 +18,8 @@ public partial class Raktar
 
     public string Kepurl { get; set; } = null!;
 
+    public bool Elvittek { get; set; }
+
     [JsonIgnore]
     public virtual Birtokolt? Birtokolt { get; set; }
 }

@@ -40,7 +40,8 @@ namespace Wherehouse_backend.Migrations
                     tipus = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false),
                     ar = table.Column<int>(type: "int(20)", nullable: false),
                     meret = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false),
-                    kepurl = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false)
+                    kepurl = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: false),
+                    elvittek = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {

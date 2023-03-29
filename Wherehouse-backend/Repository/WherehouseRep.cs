@@ -16,6 +16,7 @@ namespace Wherehouse_backend.Repository
         Task<IEnumerable<object>> GetRaktarAddress(string cim);
         Task<Raktar> AddRaktar(Raktar raktar);
         Task<Raktar> UpdateRaktar(Raktar raktar);
+        //Task<Raktar> ElvittekRaktar(int raktarId,bool elvittek);
         Task<Raktar> DeleteRaktar(int RaktarId);
 
         Task<IEnumerable<Birtokolt>> GetBirtokoltak();
@@ -30,5 +31,7 @@ namespace Wherehouse_backend.Repository
         Task<Tulajdonos> AddTulajdonos(Tulajdonos tulaj);
         Task<Tulajdonos> UpdateTulajdonos(Tulajdonos tulaj);
         Task<Tulajdonos> DeleteTulajdonos(int TulajdonosId);
+
+        Task<Tulajdonos> GetTulajdonosByEmailAndPassword(string email, string password);
     }
 }

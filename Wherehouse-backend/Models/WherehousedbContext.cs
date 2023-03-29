@@ -104,6 +104,8 @@ public partial class WherehousedbContext : DbContext
             entity.Property(e => e.Tipus)
                 .HasMaxLength(50)
                 .HasColumnName("tipus");
+            entity.Property(e => e.Elvittek)
+                .HasColumnName("elvittek");
         });
 
         modelBuilder.Entity<Tulajdonos>(entity =>

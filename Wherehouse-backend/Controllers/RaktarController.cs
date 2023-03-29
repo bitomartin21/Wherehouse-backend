@@ -45,6 +45,7 @@ namespace Wherehouse_backend.Controllers
             return await _context.UpdateRaktar(raktar);
         }
 
+
         [HttpDelete]
         public async Task<Raktar> Delete(int id)
         {

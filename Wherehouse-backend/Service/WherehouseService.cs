@@ -35,6 +35,7 @@ namespace Wherehouse_backend.Service
                 await _context.SaveChangesAsync();
                 return alkalmazott;
             }
+            
 
             public async Task<Alkalmazott> UpdateAlkalmazott(Alkalmazott alkalmazott)
             {
@@ -81,6 +82,17 @@ namespace Wherehouse_backend.Service
                 return raktar;
             }
 
+        /*
+            public async Task<Raktar> ElvittekRaktar(int raktarId,bool elvittek)
+            {
+                Raktar raktar = new Raktar();
+                raktar.Id = raktarId;
+                raktar.Elvittek = elvittek;
+                _context.Raktars.Update(raktar);
+                await _context.SaveChangesAsync();
+                return raktar;
+            }
+        */
             public async Task<Raktar> DeleteRaktar(int RaktarId)
             {
                 Raktar raktar = new Raktar();
@@ -129,9 +141,13 @@ namespace Wherehouse_backend.Service
                 await _context.SaveChangesAsync();
                 return tulaj;
             }
-			//
-			//birtokolt
-			public async Task<IEnumerable<Birtokolt>> GetBirtokoltak()
+            public async Task<Tulajdonos> GetTulajdonosByEmailAndPassword(string email, string password)
+            {
+                return await _context.Tulajdonos.FirstOrDefaultAsync(t => t.email == email && t.password == password);
+            }
+        //
+        //birtokolt
+            public async Task<IEnumerable<Birtokolt>> GetBirtokoltak()
 			{
 				return await _context.Birtokolts.ToListAsync();
 			}
@@ -169,7 +185,7 @@ namespace Wherehouse_backend.Service
 				await _context.SaveChangesAsync();
 				return birtokolt;
 			}
-			
-			
+
+
     }
 }

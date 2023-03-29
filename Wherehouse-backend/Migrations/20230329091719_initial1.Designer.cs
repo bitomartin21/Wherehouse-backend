@@ -10,7 +10,7 @@ using Wherehouse_backend.Models;
 namespace Wherehouse_backend.Migrations
 {
     [DbContext(typeof(WherehousedbContext))]
-    [Migration("20230322083601_initial1")]
+    [Migration("20230329091719_initial1")]
     partial class initial1
     {
         /// <inheritdoc />
@@ -92,6 +92,10 @@ namespace Wherehouse_backend.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)")
                         .HasColumnName("cím");
+
+                    b.Property<bool>("Elvittek")
+                        .HasColumnType("tinyint(1)")
+                        .HasColumnName("elvittek");
 
                     b.Property<string>("Kepurl")
                         .IsRequired()

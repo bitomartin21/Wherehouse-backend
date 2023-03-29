@@ -90,6 +90,10 @@ namespace Wherehouse_backend.Migrations
                         .HasColumnType("varchar(100)")
                         .HasColumnName("cím");
 
+                    b.Property<bool>("Elvittek")
+                        .HasColumnType("tinyint(1)")
+                        .HasColumnName("elvittek");
+
                     b.Property<string>("Kepurl")
                         .IsRequired()
                         .HasMaxLength(255)
